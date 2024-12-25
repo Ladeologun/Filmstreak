@@ -17,24 +17,10 @@ import {
   View,
 } from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-import MoviesDashboard from './features/movies/MoviesDashboard';
-
-
-
+import MoviesDashboard from './features/movies/components/MoviesDashboard';
 
 function App(): React.JSX.Element {
-  
-  return (
-    <MoviesDashboard />
-  );
+  return <MoviesDashboard />;
 }
-
 
 export default App;

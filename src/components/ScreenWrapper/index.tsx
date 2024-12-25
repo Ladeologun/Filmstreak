@@ -18,8 +18,7 @@ const ScreenWrapper: React.FC<PropsWithChildren<ScreenProps>> = ({
                 barStyle="light-content"
                 hidden={hideStatusBar}
                 translucent={true}
-            />
-            
+            /> 
             {children}
         </SafeAreaView>
     );

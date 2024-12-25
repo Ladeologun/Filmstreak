@@ -1,21 +1,9 @@
 import React from 'react';
 import { View,Image,Text,TouchableWithoutFeedback, ImageSourcePropType, ImageBackground } from 'react-native';
 import styles from './styles';
+import { Movie } from '~movies/types';
 
-interface Iprops{
-    item:{
-        id?:number
-        backPoster?: string
-        popularity?:number
-        title?:string
-        poster?: ImageSourcePropType
-        overview?: string
-        rating?:number
-        language?:string
-        video?:boolean
-    }
-}
-
+interface Iprops{item:Movie}
 
 const TrendingMovieCard: React.FC<Iprops> =({item})=> {
 
@@ -33,8 +21,6 @@ const TrendingMovieCard: React.FC<Iprops> =({item})=> {
         </TouchableWithoutFeedback>
     );
 }
-
-
 
 
 export default TrendingMovieCard;
