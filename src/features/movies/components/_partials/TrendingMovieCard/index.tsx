@@ -1,5 +1,5 @@
 import React from 'react';
-import { View,Image,Text,TouchableWithoutFeedback, ImageSourcePropType, ImageBackground } from 'react-native';
+import { View,Text,TouchableWithoutFeedback, ImageBackground } from 'react-native';
 import styles from './styles';
 import { Movie } from '~movies/types';
 

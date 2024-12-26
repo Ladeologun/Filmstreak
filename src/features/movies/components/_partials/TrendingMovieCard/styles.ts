@@ -23,10 +23,7 @@ const styles = StyleSheet.create({
     },
     image:{
         width:width,
-        height:"100%",
-        // borderRadius:10,
-       
-        // overflow:"hidden"
+        height:"100%"
 
     },
     itemTitle: {

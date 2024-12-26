@@ -1,5 +1,5 @@
-import React, {PropsWithChildren, useEffect, useState} from 'react';
-import {ActivityIndicator, ScrollView, View} from 'react-native';
+import React, {useEffect, useState} from 'react';
+import {ActivityIndicator, ScrollView} from 'react-native';
 import styles from './styles';
 import {ScreenWrapper} from '~components';
 import TrendingMoviesCarousel from '../_partials/TrendingMoviesCarousel';
@@ -10,7 +10,6 @@ import { DataType, syncMoviesFromTMDB } from '~movies/api';
 import { Movie } from '~movies/types';
 
 const MoviesDashboard: React.FC = () => {
-  //CHANGE the flex to 1 when fetching data;
 
   const [fetchingMovies, setFetchingMovies] = useState(false);
   const [nowPlayingMovies, setNowPlayingMovies] = useState<Movie[]>([]);

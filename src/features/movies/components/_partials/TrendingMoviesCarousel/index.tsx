@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import { View, FlatList, Animated, Dimensions } from 'react-native';
-import { MovieDetailDisplayType, carouselDummyData } from '../../../../../data';
 import TrendingMovieCard from '../../../components/_partials/TrendingMovieCard';
 import { COLORS } from '~styles';
 import styles from './styles';

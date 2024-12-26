@@ -1,5 +1,4 @@
 
-import { carouselDummyData } from "../../../../../data";
 import React from 'react';
 import { View,FlatList } from 'react-native';
 import { CategoryHeader, ListItemSeperator, MovieCard } from '~components';
