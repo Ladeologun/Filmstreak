@@ -4,10 +4,13 @@
     "baseUrl": "./src",
     "paths": {
         "*": ["/*"],
+        "~apiclient": ["apiclient"],
         "~components": ["components"],
         "~drawables": ["assets/drawables"],
         "~movies/*": ["features/movies/*"],
-        "~styles": ["styles"]
+        "~styles": ["styles"],
+        "~utils": ["utils"],
+        "~utils/*": ["utils/*"],
     }
   },
   "extends": "@react-native/typescript-config/tsconfig.json"

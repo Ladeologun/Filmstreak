@@ -4,15 +4,16 @@ import styles from './styles';
 import { COLORS } from '~styles';
 
 interface Iprops{
-    title:string
+    title:string;
+    isLoading?:boolean
 }
 
-const DashboardHeader: React.FC<Iprops> =({title}) =>{
+const DashboardHeader: React.FC<Iprops> =({title,isLoading}) =>{
 
     return (
         <View style={styles.container}>
             <View style={styles.textcontainer}>
-                <Text style={[styles.text,{color:COLORS.SKYBLUE}]}>{title}</Text>
+                <Text style={[styles.text,{color:COLORS.SKYBLUE}, isLoading && {opacity:0.3}]}>{title}</Text>
             </View>
         </View>
     );

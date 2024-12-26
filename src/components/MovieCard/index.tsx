@@ -11,7 +11,7 @@ const MovieCard: React.FC<Iprops> =({item})=> {
     return (
         <View style={styles.container}>
 
-            <ImageBackground style={styles.imagebackground} source={item.poster}>
+            <ImageBackground style={styles.imagebackground} source={{uri: item.poster}}>
                 <TouchableOpacity onPress={() => {}}>
                     <Image source={require("../../assets/drawables/play-button.png")} style={styles.playBtnStyle}/>
                 </TouchableOpacity>

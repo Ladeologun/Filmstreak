@@ -4,12 +4,17 @@ import { MovieDetailDisplayType, carouselDummyData } from '../../../../../data';
 import TrendingMovieCard from '../../../components/_partials/TrendingMovieCard';
 import { COLORS } from '~styles';
 import styles from './styles';
+import { Movie } from '~movies/types';
+
+interface Iprops{
+    movies:Movie[]
+}
 
 
 const { width } = Dimensions.get("screen");
-const TrendingMoviesCarousel: React.FC =()=> {
+const TrendingMoviesCarousel: React.FC<Iprops> =({movies})=> {
 
-    const slideListRef = useRef<FlatList<MovieDetailDisplayType>>(null);
+    const slideListRef = useRef<FlatList<Movie>>(null);
     const scrollX = useRef(new Animated.Value(0))?.current;
     let position = Animated.divide(scrollX, width);
 
@@ -17,7 +22,7 @@ const TrendingMoviesCarousel: React.FC =()=> {
     useEffect(() => {
         let index = 0;
         const interval = setInterval(() => {
-          index = (index + 1) % carouselDummyData.length;
+          index = (index + 1) % movies.length;
           slideListRef.current?.scrollToOffset({
             offset: index * width,
             animated: true,
@@ -32,7 +37,7 @@ const TrendingMoviesCarousel: React.FC =()=> {
         <View>
             <FlatList
                 ref={slideListRef} 
-                data={carouselDummyData}
+                data={movies}
                 keyExtractor={data=>data.id.toString()}
                 horizontal
                 pagingEnabled
@@ -49,7 +54,7 @@ const TrendingMoviesCarousel: React.FC =()=> {
 
             <View style={styles.positionIndicatorWrapper}>
                 <View style={styles.dotView}>
-                    {carouselDummyData.map((_a:any, i:number) => {
+                    {movies.map((_a:any, i:number) => {
                         let opacity = position?.interpolate({
                             inputRange: [i - 1, i, i + 1],
                             outputRange: [0.3, 1, 0.3],

@@ -11,7 +11,7 @@ const TrendingMovieCard: React.FC<Iprops> =({item})=> {
     return (
         <TouchableWithoutFeedback  onPress={() =>{}}>
             <View style={styles.container}>
-                <ImageBackground style={styles.image} source={item.poster} resizeMode="cover">
+                <ImageBackground style={styles.image} source={{uri: item.poster}} resizeMode="cover">
                     <View style={styles.textview}>
                         <Text style={styles.itemTitle}>{item.title} </Text>
                         <Text numberOfLines={2} style={styles.itemDescription}>{item.overview}</Text>

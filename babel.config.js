@@ -22,8 +22,11 @@ module.exports = function (api) {
             ],
             alias: {
               "~components": "./src/components",
+              "~apiclient": "./src/apiclient",
               "~drawables":"./src/assets/drawables",
               "~styles":"./src/styles",
+              "~utils":"./src/utils",
+              "~utils/*":"./src/utils/*",
               "~movies":"./src/features/movies",
             }
           }
