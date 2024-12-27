@@ -3,5 +3,6 @@ export const COLORS = {
     WHITE:"#ffffff",
     GREEN:"green",
     GRAY:"gray",
-    SKYBLUE:"skyblue"
+    SKYBLUE:"skyblue",
+    TEXTGREY: "#585563",
 }

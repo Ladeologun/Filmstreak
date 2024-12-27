@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     
     background:{
         width:"100%",
-        height:height < 700 ? height* 0.6:height*0.7
+        height:height < 700 ? height* 0.5:height*0.65
     },
     
     title:{
@@ -16,6 +16,14 @@ const styles = StyleSheet.create({
         // fontFamily: "Avenir", 
         fontSize: 30, 
         lineHeight: 36
+    },
+    gradientOvelay: {
+        position: 'absolute',
+    bottom: 0,
+    width: '100%',
+    height: 200,
+    backgroundColor: 'rgba(15, 17, 29, 0.7)', // Dark semi-transparent color
+    zIndex: 1,
     }
 
 })

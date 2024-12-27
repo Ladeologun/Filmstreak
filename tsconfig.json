@@ -11,6 +11,8 @@
         "~styles": ["styles"],
         "~utils": ["utils"],
         "~utils/*": ["utils/*"],
+        "~navigation": ["navigation"],
+        "~navigation/*": ["navigation/*"],
     }
   },
   "extends": "@react-native/typescript-config/tsconfig.json"

@@ -24,6 +24,20 @@ const styles = StyleSheet.create({
         fontSize:14, 
         lineHeight: 22,
         // fontFamily:"Avenir"
+    },
+    wishListTextStyle: {
+        color: COLORS.WHITE,
+        fontSize: 16,
+        fontWeight:"600"
+    },
+    wishlistBtn: {
+        flexDirection:"row",
+        alignSelf:"center",
+        marginTop:16,
+        backgroundColor:"red",
+        paddingHorizontal:8,
+        paddingVertical:5,
+        borderRadius:5
     }
 
 })

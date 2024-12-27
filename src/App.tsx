@@ -18,9 +18,16 @@ import {
 } from 'react-native';
 
 import MoviesDashboard from './features/movies/components/MoviesDashboard';
+import AppNavigator from '~navigation/root';
+import { NavigationContainer } from '@react-navigation/native';
 
 function App(): React.JSX.Element {
-  return <MoviesDashboard />;
+  
+  return (
+    <NavigationContainer>
+      <AppNavigator />
+    </NavigationContainer>
+   );
 }
 
 export default App;

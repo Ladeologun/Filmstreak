@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
         justifyContent:"center",
     },
     textdetails:{
-        color:"gray",
+        color:COLORS.WHITE,
         fontSize:16,
         // fontFamily:"Avenir",
         marginTop:8,
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
     textoverview:{
         // fontFamily:"Avenir",
         fontSize:18,
-        color:"#fff"
+        color: COLORS.WHITE
     }
 
 })

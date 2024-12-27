@@ -28,6 +28,8 @@ module.exports = function (api) {
               "~utils":"./src/utils",
               "~utils/*":"./src/utils/*",
               "~movies":"./src/features/movies",
+              "~navigation":"./src/navigation",
+              "~navigation/*":"./src/navigation/*"
             }
           }
       ],
