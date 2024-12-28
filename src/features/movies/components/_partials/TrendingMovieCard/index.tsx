@@ -10,7 +10,6 @@ interface Iprops{item:Movie}
 const TrendingMovieCard: React.FC<Iprops> = ({item})=> {
     const navigation = useNavigation<NavigationTypes>()
 
-    
     return (
         <TouchableWithoutFeedback  
             onPress={() =>{navigation.navigate(ROUTES.MOVIE_DETAILS, {movie:item})}}

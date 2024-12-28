@@ -1,8 +1,8 @@
-import { StyleSheet, Platform, StatusBar, Dimensions } from "react-native";
+import { StyleSheet, Platform, Dimensions } from "react-native";
 import { COLORS } from "~styles";
 
 
-const { width, height } = Dimensions.get('window')
+const { height } = Dimensions.get('window')
 const styles = StyleSheet.create({
     contentcontainer:{
         flex:1,

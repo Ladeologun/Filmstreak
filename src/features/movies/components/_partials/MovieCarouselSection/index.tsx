@@ -5,14 +5,16 @@ import { CategoryHeader, ListItemSeperator, MovieCard } from '~components';
 import { Movie } from "~movies/types";
 
 interface Iprops{
-    movies:Movie[]
+    movies:Movie[];
+    title?: string;
+    showRightCTA?:boolean
 }
 
-const PopularMovie: React.FC<Iprops> =({movies})=> {
+const MovieCarouselSection: React.FC<Iprops> =({movies, title="Popular", showRightCTA=false})=> {
     
     return (<>
         {<View>
-            <CategoryHeader title="Popular"/>
+            <CategoryHeader title={title} showRightCTA={showRightCTA}/>
             <FlatList
                 data={movies}
                 keyExtractor={item => item.id.toString()}
@@ -27,4 +29,4 @@ const PopularMovie: React.FC<Iprops> =({movies})=> {
 }
 
 
-export default PopularMovie;
+export default MovieCarouselSection;

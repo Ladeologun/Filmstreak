@@ -13,6 +13,8 @@ export interface Movie {
     date:string
 }
 
+export type RequestStatus = "success"|"error";
+
 
 export interface TMDBMovie {
     id:number

@@ -1,36 +1,45 @@
 import React, {useEffect, useState} from 'react';
-import {ActivityIndicator, Image, ImageBackground, ScrollView, Text, View} from 'react-native';
+import {ActivityIndicator, FlatList, Image, Text, View} from 'react-native';
 import styles from './styles';
 import {ScreenWrapper} from '~components';
 import { COLORS } from '~styles';
-import { DataType, syncMoviesFromTMDB } from '~movies/api';
-import { Movie } from '~movies/types';
+import { fetchWishlistMovies} from '~movies/api';
+import { Movie, RequestStatus } from '~movies/types';
 import DetailsHeader from '../_partials/DetailsHeader';
-import { carouselDummyData } from '../../../../data';
-import { STAR_LOGO } from '~movies/constants';
+import { EMPTY_WISHLIST_ICON } from '~movies/constants';
+import WishlistItem from '../_partials/WishlistItem';
 
 const MovieWishlist: React.FC = () => {
 
-  const [fetchingMovies, setFetchingMovies] = useState(false);
-  const [nowPlayingMovies, setNowPlayingMovies] = useState<Movie[]>([]);
-  const [popularMovies, setPopularMovies] = useState<Movie[]>([]);
+  const [loadingWishlist, setLoadingWishlist] = useState(false);
+  const [isFetchingNextPage, setFetchingNextPage] = useState(false);
+  const [showErrorModalMessage, setShowErrorModalMessage] = useState("");
 
-  const onResultFetched = (data:DataType, errors:string[]) => {
+  const [wishlistMovies, setWishlistMovies] = useState<Movie[]>([])
+  const onfetchWishlist = (type:RequestStatus,  response:Movie[], error:Error|null)=>{
+    setLoadingWishlist(false)
+      if(type == "success" && response){
+        setWishlistMovies(response)
+      }else {
+          setShowErrorModalMessage(error?.message!)
+      }
+  }
 
-    setNowPlayingMovies(data?.nowPlayingMovies);
-    setPopularMovies(data?.popularMovies);
-    setFetchingMovies(false);
 
-  };
+  useEffect(()=>{
+    fetchWishlistMovies(1,onfetchWishlist)
+  },[])
 
-//   useEffect(()=>{ 
-//     setFetchingMovies(true);
-//     syncMoviesFromTMDB(onResultFetched)
-//   },[])
+  const onLoadMore = () => {
+    // if (hasNextPage && !isFetching && customers?.length >= CUSTOMER_PAGINATION_LIMIT && !isRefetching) {
+    //     fetchNextPage();
+    // }
+}
 
-  
+
   return (
     <ScreenWrapper containerStyle={{backgroundColor:"#080C28"}} hideStatusBar={true}>
+
         <DetailsHeader 
             containerStyle={styles.containerStyle} 
             hasTitle 
@@ -38,54 +47,45 @@ const MovieWishlist: React.FC = () => {
             titleStyle={{fontWeight:"700",fontSize:18}}
         />
 
-        <View style={styles.wishlistItemCard}>
-            <View style={{borderRadius:8,marginRight:15}}>
-                <Image 
-                    source={carouselDummyData[0]?.poster} 
-                    style={{height:100,width:100,borderRadius:8}} 
-                    resizeMode="cover"
-                />
-            </View>
-            <View style={{justifyContent:"center"}}>
-                <Text style={styles.titleStyle}>Seven Dooors</Text>
-                <Text style={styles.releaseYearStyle}>Release Year 2012</Text>
-                <View style={styles.votesandpopularity}>
-                    <View style={[styles.categorycontainer,{paddingHorizontal:0,marginLeft:0}]}>
-                        <Text style={styles.categorttext}>{`❤️ 9`}</Text>
+        <FlatList
+            data={wishlistMovies ?? []}
+            keyExtractor={data=>data.id.toString()}
+            renderItem={({item,index})=>{
+              return (<WishlistItem index={index} item={item}/>)
+            }}
+            contentContainerStyle={[styles.listContentContainer,!!wishlistMovies?.length && {flex:0}]}
+            style={styles.listContainer}
+            onEndReached={onLoadMore}
+            onEndReachedThreshold={0}
+            ListFooterComponent={() =>
+                isFetchingNextPage ? (
+                    <View style={styles.listFooterLoadingNextPageContainer}>
+                        <ActivityIndicator color={COLORS.SKYBLUE} />
+                        <Text style={styles.listFooterLoadingNextPageText}>
+                            {`Loading more movies...`}
+                        </Text>
                     </View>
-                    <View style={[styles.categorycontainer,{paddingHorizontal:2}]}>
-                        <Image source={STAR_LOGO} resizeMode="contain" style={{width:15,height:15,marginRight:5}}/>
-                        <Text style={styles.categorttext}>{8}</Text>
-                    </View>
-                </View>
-            </View>
-        </View>
+                ) : (
+                    <></>
+                )
+            }
+            ListEmptyComponent={() => (
+              <View style={styles.emptyView}>
+                  {
+                    !!loadingWishlist ?
+                        <ActivityIndicator color={COLORS.SKYBLUE} size={60} /> :
+                        <Image source={EMPTY_WISHLIST_ICON} style={{width:60,height:60}} />
+                  }
+                  <Text style={styles.emptyViewTitle}>
+                      {loadingWishlist ? "Loading movies..." :  "You have no movies yet"}
+                  </Text>
+                  <Text style={styles.emptyViewBody}>
+                      {(loadingWishlist) ? "Please wait while your movies are loaded": "You have no movies on your wishlist"}         
+                  </Text>
+              </View>
+            )}
+        />
 
-
-        <View style={[styles.wishlistItemCard,{backgroundColor:"#080C28"}]}>
-            <View style={{borderRadius:8,marginRight:15}}>
-                <Image 
-                    source={carouselDummyData[0]?.poster} 
-                    style={{height:100,width:100,borderRadius:8}} 
-                    resizeMode="cover"
-                />
-            </View>
-            <View style={{justifyContent:"center"}}>
-                <Text style={{color:COLORS.WHITE}}>Seven Dooors</Text>
-                <Text style={{color:COLORS.WHITE}}>Release Year 2012</Text>
-                <View style={styles.votesandpopularity}>
-                    <View style={[styles.categorycontainer,{paddingHorizontal:0,marginLeft:0}]}>
-                        <Text style={styles.categorttext}>{`❤️ 9`}</Text>
-                    </View>
-                    <View style={[styles.categorycontainer,{paddingHorizontal:2}]}>
-                        <Image source={STAR_LOGO} resizeMode="contain" style={{width:15,height:15,marginRight:5}}/>
-                        <Text style={styles.categorttext}>{8}</Text>
-                    </View>
-                </View>
-            </View>
-        </View>
-
-      
     </ScreenWrapper>
   );
 };

@@ -58,36 +58,36 @@ const MovieDetailsScreen:React.FC = () => {
 
     return (
         <ScreenWrapper  hideStatusBar={true}>
-        <ScrollView contentContainerStyle={styles.contentcontainer} style={styles.container}>
-            <MovieDetailsHeaderSection 
-                poster={movie?.poster} 
-                title= {movie?.title}
-                showWatchlistWalkthrough= {showWatchlistWalkthrough}
-                handleWalkthroughClose = {onWalkthroughClose} 
-            />
+            <ScrollView contentContainerStyle={styles.contentcontainer} style={styles.container}>
+                <MovieDetailsHeaderSection 
+                    poster={movie?.poster} 
+                    title= {movie?.title}
+                    showWatchlistWalkthrough= {showWatchlistWalkthrough}
+                    handleWalkthroughClose = {onWalkthroughClose} 
+                />
 
-            <MoviePreferenceSection 
-                language={movie?.language} 
-                popularity={movie?.popularity} 
-                rating={movie?.rating} 
-                id={movie.id}
-                addTowishlist={handleAddtoWishlist}
-                isAddingMovieToWishlist = {addingMovieTowishlist}
-                isMovieOnWishlist= {isMovieOnWishlist}
-                isCheckingMovieState = {checkingMovieState}
-            />
-            <View style={styles.overviewcon}>
-                <Text style={styles.textoverview}>Overview</Text>
-                <Text numberOfLines={5} style={styles.textdetails}>{movie?.overview}</Text>
-            </View>
+                <MoviePreferenceSection 
+                    language={movie?.language} 
+                    popularity={movie?.popularity} 
+                    rating={movie?.rating} 
+                    id={movie.id}
+                    addTowishlist={handleAddtoWishlist}
+                    isAddingMovieToWishlist = {addingMovieTowishlist}
+                    isMovieOnWishlist= {isMovieOnWishlist}
+                    isCheckingMovieState = {checkingMovieState}
+                />
+                <View style={styles.overviewcon}>
+                    <Text style={styles.textoverview}>Overview</Text>
+                    <Text numberOfLines={5} style={styles.textdetails}>{movie?.overview}</Text>
+                </View>
 
-            <ErrorInfoModal 
-                isModalVisible={!!showErrorModalMessage}
-                handleModalDismiss={()=>{setShowErrorModalMessage("")}}
-                desc={showErrorModalMessage}
-            />
+                <ErrorInfoModal 
+                    isModalVisible={!!showErrorModalMessage}
+                    handleModalDismiss={()=>{setShowErrorModalMessage("")}}
+                    desc={showErrorModalMessage}
+                />
 
-        </ScrollView>
+            </ScrollView>
         </ScreenWrapper>
     );
 }

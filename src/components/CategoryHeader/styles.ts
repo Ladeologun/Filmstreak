@@ -19,10 +19,11 @@ const styles = StyleSheet.create({
         textShadowOffset:{width:0.5,height:0.5}
     },
     favouriteListText:{
-        fontSize: 14,
+        fontSize: 16,
+        fontWeight:"500",
         color:COLORS.SKYBLUE,
         borderBottomColor:COLORS.GREEN,
-        textDecorationLine:"underline",
+        // textDecorationLine:"underline",
         textDecorationColor:COLORS.GRAY,
         textShadowColor:COLORS.GRAY,
         textShadowOffset:{width:0.5,height:0.5}

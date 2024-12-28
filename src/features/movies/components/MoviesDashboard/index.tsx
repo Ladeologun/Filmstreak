@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import {ActivityIndicator, ScrollView} from 'react-native';
+import {ActivityIndicator, RefreshControl, ScrollView} from 'react-native';
 import styles from './styles';
-import {ScreenWrapper} from '~components';
+import {ErrorInfoModal, ScreenWrapper} from '~components';
 import TrendingMoviesCarousel from '../_partials/TrendingMoviesCarousel';
-import PopularMovie from '../_partials/PopularMovies';
+import MovieCarouselSection from '../_partials/MovieCarouselSection';
 import DashboardHeader from '../_partials/DashboardHeader';
 import { COLORS } from '~styles';
 import { DataType, syncMoviesFromTMDB } from '~movies/api';
@@ -14,11 +14,24 @@ const MoviesDashboard: React.FC = () => {
   const [fetchingMovies, setFetchingMovies] = useState(false);
   const [nowPlayingMovies, setNowPlayingMovies] = useState<Movie[]>([]);
   const [popularMovies, setPopularMovies] = useState<Movie[]>([]);
+  const [upcomingMovies, setUpcomingMovies] = useState<Movie[]>([]);
+  const [showErrorModalMessage, setShowErrorModalMessage] = useState("");
+  const [isRefreshing, setRefreshing] = useState(false);
+
+
 
   const onResultFetched = (data:DataType, errors:string[]) => {
+    
     setNowPlayingMovies(data?.nowPlayingMovies);
     setPopularMovies(data?.popularMovies);
-    setFetchingMovies(false)
+    setUpcomingMovies(data?.upcomingMovies)
+    setFetchingMovies(false);
+    setRefreshing(false)
+  
+    if(!!errors.length){
+      setShowErrorModalMessage(errors?.[0])
+    }
+
   };
 
   useEffect(()=>{
@@ -26,22 +39,46 @@ const MoviesDashboard: React.FC = () => {
     syncMoviesFromTMDB(onResultFetched)
   },[])
 
+
+  const refreshHomeScreen = async () => {
+    setRefreshing(true);
+    syncMoviesFromTMDB(onResultFetched)
+};
+
   
   return (
     <ScreenWrapper>
-      <DashboardHeader title='FILMSTREAK' isLoading={fetchingMovies}/>
-      <ScrollView contentContainerStyle={[styles.contentContainerStyle, fetchingMovies && {flex:1}]}>
+        <DashboardHeader title='FILMSTREAK' isLoading={fetchingMovies}/>
+        <ScrollView 
+            contentContainerStyle={[styles.contentContainerStyle, fetchingMovies && {flex:1}]}
+            refreshControl={
+              <RefreshControl
+                refreshing={isRefreshing}
+                onRefresh={refreshHomeScreen}
+                style={styles.refreshControlStyle}
+                tintColor={COLORS.SKYBLUE}
+              />
+          }
+          
+        >
 
-       {!!fetchingMovies ? 
-          (<ActivityIndicator size={"large"} color={COLORS.SKYBLUE} style={{marginBottom:60}}/>) :
-          (<React.Fragment>
-              <TrendingMoviesCarousel movies={nowPlayingMovies?.slice(0,5)} />
-              <PopularMovie movies={popularMovies} />
-              <PopularMovie movies={popularMovies}/>
-            </React.Fragment>
-          )
+        {!!fetchingMovies ? 
+            (<ActivityIndicator size={"large"} color={COLORS.SKYBLUE} style={{marginBottom:60}}/>) :
+            (<React.Fragment>
+                <TrendingMoviesCarousel movies={nowPlayingMovies?.slice(0,5)} />
+                <MovieCarouselSection movies={nowPlayingMovies?.slice(5)} title='Now Playing' showRightCTA={true}/>
+                <MovieCarouselSection movies={popularMovies} />
+                <MovieCarouselSection movies={upcomingMovies} title='Upcoming'/>
+              </React.Fragment>
+            )
         }
-      </ScrollView>
+
+        <ErrorInfoModal 
+            isModalVisible={!!showErrorModalMessage}
+            handleModalDismiss={()=>{setShowErrorModalMessage("")}}
+            desc={showErrorModalMessage}
+        />
+        </ScrollView>
     </ScreenWrapper>
   );
 };

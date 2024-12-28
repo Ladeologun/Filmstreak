@@ -6,7 +6,10 @@ const styles =  StyleSheet.create({
         paddingHorizontal:10,
         justifyContent:"center",
         flex:0
-    }
+    },
+    refreshControlStyle: {
+        backgroundColor: COLORS.PRIMARY
+    },
 });
 
 export default styles;
