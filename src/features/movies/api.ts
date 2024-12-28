@@ -91,7 +91,7 @@ export const fetchWishlistMovies = async(page=1, callback:Function)=> {
     try{
         const response = await Client.get(options);
         let movies = convertTMDBMovieToMovie(response?.results);
-        callback("success", movies, null);
+        callback("success", {total_pages:response?.total_pages, movies}, null);
     }catch(error){
         callback?.("error", null, error)
     }

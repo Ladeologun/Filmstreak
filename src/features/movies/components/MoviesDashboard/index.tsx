@@ -66,9 +66,9 @@ const MoviesDashboard: React.FC = () => {
             (<ActivityIndicator size={"large"} color={COLORS.SKYBLUE} style={{marginBottom:60}}/>) :
             (<React.Fragment>
                 <TrendingMoviesCarousel movies={nowPlayingMovies?.slice(0,5)} />
-                <MovieCarouselSection movies={nowPlayingMovies?.slice(5)} title='Now Playing' showRightCTA={true}/>
-                <MovieCarouselSection movies={popularMovies} />
-                <MovieCarouselSection movies={upcomingMovies} title='Upcoming'/>
+               {!!nowPlayingMovies?.length && <MovieCarouselSection movies={nowPlayingMovies?.slice(5)} title='Now Playing' showRightCTA={true}/>}
+              {!!popularMovies?.length && <MovieCarouselSection movies={popularMovies} />}
+              {!!upcomingMovies?.length && <MovieCarouselSection movies={upcomingMovies} title='Upcoming'/>}
               </React.Fragment>
             )
         }

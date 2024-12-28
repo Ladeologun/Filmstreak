@@ -14,3 +14,6 @@ export const LEFT_ARROW = require("../../assets/drawables/left-arrow.png");
 export const UPLOAD = require("../../assets/drawables/wish-list.png");
 export const ADD_ICON = require("../../assets/drawables/add-icon.png");
 export const EMPTY_WISHLIST_ICON = require("../../assets/drawables/empty-wishlist.png");
+export const DELETE_ICON = require("../../assets/drawables/delete.png");
+
+export const MOVIE_PAGINATION_LIMIT = 15;

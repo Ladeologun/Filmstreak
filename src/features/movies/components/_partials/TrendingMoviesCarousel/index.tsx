@@ -29,7 +29,7 @@ const TrendingMoviesCarousel: React.FC<Iprops> =({movies})=> {
         }, 5000);
 
         return () => clearInterval(interval); 
-    }, []);
+    }, [movies]);
 
     
     return (

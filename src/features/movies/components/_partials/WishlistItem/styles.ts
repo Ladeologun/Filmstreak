@@ -11,6 +11,8 @@ const styles =  StyleSheet.create({
         padding:10,
         opacity:0.8,
         backgroundColor:"#171C48",
+        justifyContent:"space-between",
+        alignItems:"center",
         flexDirection:"row"
     },
     votesandpopularity:{

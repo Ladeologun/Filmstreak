@@ -45,7 +45,7 @@ const styles =  StyleSheet.create({
         color: "rgba(13, 24, 33, 1)"
     },
     listFooterLoadingNextPageContainer: {
-        backgroundColor: "white",
+        backgroundColor:"#080C28",
         paddingVertical: 16,
         alignItems: "center",
         justifyContent: "center"

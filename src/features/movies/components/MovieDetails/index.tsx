@@ -4,7 +4,7 @@ import styles from './styles';
 import MovieDetailsHeaderSection from '../_partials/MovieDetailsHeaderSection';
 import MoviePreferenceSection from '../_partials/MoviePreferenceSection';
 import { Movie } from '~movies/types';
-import { useRoute } from '@react-navigation/native';
+import { useFocusEffect, useRoute } from '@react-navigation/native';
 import { toggleWishlist, checkMovieAccountState, MovieStatusType } from '~movies/api';
 import { ErrorInfoModal, ScreenWrapper } from '~components';
 
@@ -50,10 +50,17 @@ const MovieDetailsScreen:React.FC = () => {
         setShowWatchlistWalkthrough(false)
     },[])
 
-    useEffect(()=>{
-        setCheckingMovieState(true)
-        handleCheckMovieState();
-    },[movie?.id])
+    // useEffect(()=>{
+    //     setCheckingMovieState(true)
+    //     handleCheckMovieState();
+    // },[movie?.id])
+
+    useFocusEffect(
+        useCallback(() => {
+            setCheckingMovieState(true)
+            handleCheckMovieState();
+    }, [movie?.id]));
+
 
 
     return (

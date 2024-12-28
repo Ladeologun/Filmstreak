@@ -5,6 +5,7 @@ import CategoryHeader from "./CategoryHeader";
 import Walkthrough from "./Walkthrough";
 import type { WalkthroughHandle } from "./Walkthrough";
 import ErrorInfoModal from "./ErrorModal";
+import LimitTextComponent from "./LimitText";
 
 export {
     ScreenWrapper,
@@ -13,5 +14,6 @@ export {
     CategoryHeader,
     Walkthrough,
     ErrorInfoModal,
+    LimitTextComponent,
     WalkthroughHandle
 }
