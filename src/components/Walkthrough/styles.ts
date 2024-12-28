@@ -3,7 +3,7 @@ import { COLORS } from "~styles";
 
 export default StyleSheet.create({
     contentContainer: {
-        backgroundColor: COLORS.PRIMARY,
+        backgroundColor: COLORS.SKYBLUE,
         left: 0,
         right: 0,
         alignSelf: "flex-end",
@@ -15,14 +15,15 @@ export default StyleSheet.create({
     headerText: {
         // fontFamily: Fonts.CalibreMedium,
         fontSize: 17,
+        fontWeight:"700",
         lineHeight: 25,
-        color: COLORS.SKYBLUE
+        color: COLORS.PRIMARY
     },
     headerDesc: {
         // fontFamily: Fonts.Calibre,
         fontSize: 15,
         lineHeight: 22,
-        color: COLORS.SKYBLUE
+        color: COLORS.PRIMARY
     },
     headerActionContainer: {
         flexDirection: "row",
@@ -33,9 +34,9 @@ export default StyleSheet.create({
         // fontFamily: Fonts.CalibreMedium,
         fontSize: 17,
         lineHeight: 25,
-        color: COLORS.SKYBLUE
+        color: COLORS.PRIMARY
     },
     headerActionBtnTextNext: {
-        color: COLORS.SKYBLUE
+        color: COLORS.PRIMARY
     }
 })

@@ -35,7 +35,6 @@ export interface WalkthroughHandle {
 }
 
 
-
 const Walkthrough = forwardRef<WalkthroughHandle, Props>(({
     triangleStyle,
     contentContainerStyle,
@@ -148,7 +147,7 @@ const Walkthrough = forwardRef<WalkthroughHandle, Props>(({
                     >
                         <Image 
                             source={require("../../assets/drawables/triangle.png")}
-                            tintColor={COLORS.PRIMARY}
+                            tintColor={COLORS.SKYBLUE}
                             style={[{
                                 position: "absolute",
                                 top: getTriangleTopPosition(),

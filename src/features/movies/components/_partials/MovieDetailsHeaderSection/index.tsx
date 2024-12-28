@@ -1,39 +1,44 @@
-import { Image, ImageBackground, Text, View } from "react-native";
-import styles from "./styles";
-import DetailsHeader from "../DetailsHeader";
-import MovieDetailsCTA from "../MovieDetailsCTA/Index";
+import {Image, ImageBackground, Text, View} from 'react-native';
+import styles from './styles';
+import DetailsHeader from '../DetailsHeader';
+import React from 'react';
 
 interface Iprops {
-    poster: string;
-    title: string;
-    addedToWishlist: boolean
+  poster: string;
+  title: string;
+  showWatchlistWalkthrough: boolean;
+  handleWalkthroughClose: () => void;
 }
 
+const MovieDetailsHeaderSection: React.FC<Iprops> = ({
+  poster,
+  showWatchlistWalkthrough,
+  title,
+  
+  handleWalkthroughClose,
+}) => {
+  return (
+    <ImageBackground
+      source={{uri: poster}}
+      style={styles.background}
+      resizeMode="cover"
+    >
+      <View style={{flex: 1}}>
+        <DetailsHeader
+          containerStyle={{marginTop:4}} 
+          hasRightCTA={true}
+          showWalkthrough={showWatchlistWalkthrough}
+          handleWalkthroughClose={handleWalkthroughClose}
+        />
 
-const MovieDetailsHeaderSection:React.FC<Iprops> = ({poster, title, addedToWishlist}) => {
+        <View style={{flex: 1, justifyContent: 'flex-end'}}>
+          <View style={styles.titleContainer}>
+            <Text style={styles.title}>{title}</Text>
+          </View>
+        </View>
+      </View>
+    </ImageBackground>
+  );
+};
 
-    return(
-        <ImageBackground source={{uri:poster}}
-            style={styles.background}
-            resizeMode="cover"
-        >
-            <View style={{flex:1}}>
-                <DetailsHeader />
-
-                <View style={{flex:1,justifyContent:"flex-end"}}>
-                    
-                    <View
-                        style={
-                            {width:"100%",height:200,alignItems:"center",justifyContent:"flex-end", backgroundColor:"rgba(15, 17, 29, 0.2)"}
-                        }
-                    >
-                        <MovieDetailsCTA addedToWishlist={addedToWishlist} />
-                        <Text style={styles.title}>{title}</Text>
-                    </View>
-                </View>
-            </View>
-        </ImageBackground>
-    )
-}
-
-export default MovieDetailsHeaderSection;
+export default React.memo(MovieDetailsHeaderSection);

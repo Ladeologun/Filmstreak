@@ -19,11 +19,18 @@ const styles = StyleSheet.create({
     },
     gradientOvelay: {
         position: 'absolute',
-    bottom: 0,
-    width: '100%',
-    height: 200,
-    backgroundColor: 'rgba(15, 17, 29, 0.7)', // Dark semi-transparent color
-    zIndex: 1,
+        bottom: 0,
+        width: '100%',
+        height: 200,
+        backgroundColor: 'rgba(15, 17, 29, 0.7)', // Dark semi-transparent color
+        zIndex: 1,
+    },
+    titleContainer:{
+        width:"100%",
+        height:200,
+        alignItems:"center",
+        justifyContent:"flex-end", 
+        backgroundColor:"rgba(15, 17, 29, 0.2)"
     }
 
 })

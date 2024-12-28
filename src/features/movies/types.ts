@@ -10,6 +10,7 @@ export interface Movie {
     rating:number
     language:string
     video?:boolean
+    date:string
 }
 
 
@@ -20,14 +21,15 @@ export interface TMDBMovie {
     title:string
     poster_path?: string
     overview?: string
-    vote_average?:number
-    original_language?:string
+    vote_average:number
+    original_language:string
     video?:boolean
+    release_date: string
 }
 
 export interface NavigationTypes {
     navigate: (name: string, params?: { [key: string]: any }) => void;
     replace?: (name: string, params?: { [key: string]: any }) => void;
     canGoBack?: () => boolean;
-    goBack?: () => void;
+    goBack: () => void;
 }

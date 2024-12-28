@@ -13,7 +13,8 @@ export const convertTMDBMovieToMovie = (movie: TMDBMovie[]):Movie[] => {
         overview:mv["overview"],
         rating:mv["vote_average"],
         language:mv["original_language"],
-        video:mv["video"]
+        video:mv["video"],
+        date:mv["release_date"]
     }))
 
     return modifieddata
