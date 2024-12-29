@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     },
     overviewcon:{
         flex:1,
-        paddingHorizontal:8,
+        paddingHorizontal:12,
         marginTop:8,
         justifyContent:"center",
     },

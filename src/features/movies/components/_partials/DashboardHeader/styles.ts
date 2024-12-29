@@ -7,12 +7,8 @@ const styles = StyleSheet.create({
         height:50,
         flexDirection:"row",
         backgroundColor:COLORS.PRIMARY,
-        // backgroundColor:COLORS.GREEN,
-        // borderTopLeftRadius:5,
-        // borderTopRightRadius:5,
         alignItems:"center",
         justifyContent:"center",
-        // justifyContent:"space-between",
         paddingHorizontal:15
     },
     image:{
