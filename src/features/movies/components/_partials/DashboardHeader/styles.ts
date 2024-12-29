@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { COLORS } from "~styles";
+import { COLORS, Fonts } from "~styles";
 
 
 const styles = StyleSheet.create({
@@ -17,11 +17,12 @@ const styles = StyleSheet.create({
         margin:0,
     },
     text:{
-        fontSize:18,
+        fontSize:22,
         color:COLORS.WHITE,
         fontWeight:"700",
         letterSpacing:1,
-        fontFamily:"Times",
+        // fontFamily:"Times",
+        fontFamily:Fonts.GupterBold,
         // opacity:0.3
         
     },

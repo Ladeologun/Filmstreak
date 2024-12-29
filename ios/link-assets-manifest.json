@@ -1,0 +1,97 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/CaveatBold.ttf",
+      "sha1": "e71feaec30e28858890521f4116b468c44efec08"
+    },
+    {
+      "path": "src/assets/fonts/CaveatMedium.ttf",
+      "sha1": "87a6e053561e2e4fe46ec1a5bde939c7852bb279"
+    },
+    {
+      "path": "src/assets/fonts/CaveatRegular.ttf",
+      "sha1": "c3c969c44a97760dd2dfd01c452976c725307b42"
+    },
+    {
+      "path": "src/assets/fonts/CaveatSemiBold.ttf",
+      "sha1": "42b0a68e442e972219b83c8329e83d5c27f6a1a0"
+    },
+    {
+      "path": "src/assets/fonts/CreepsterRegular.ttf",
+      "sha1": "7d00ea50354f1d3364e6403054254586fbafc533"
+    },
+    {
+      "path": "src/assets/fonts/GupterBold.ttf",
+      "sha1": "aa996a51c71dfccb0ed93665079def57360e14e4"
+    },
+    {
+      "path": "src/assets/fonts/GupterMedium.ttf",
+      "sha1": "45d6163dc4d66bda8aaa41011218eb80c00d0b35"
+    },
+    {
+      "path": "src/assets/fonts/GupterRegular.ttf",
+      "sha1": "121dc6f5271a27f9df2584ba17833277b85ed617"
+    },
+    {
+      "path": "src/assets/fonts/PermanentMarkerRegular.ttf",
+      "sha1": "bc40bfbc7eb7715af82b136429848a3c7a83a2b3"
+    },
+    {
+      "path": "src/assets/fonts/RalewayBlack.ttf",
+      "sha1": "4f6faddc3e5ec227d8352eda71c3367f67ee5732"
+    },
+    {
+      "path": "src/assets/fonts/RalewayBold.ttf",
+      "sha1": "df52b051d8cbe8f238a4192d1b81e6dca2a08f72"
+    },
+    {
+      "path": "src/assets/fonts/RalewayBoldItalic.ttf",
+      "sha1": "58fdb4e6690e5e56e5b5aabb495e5f383cf50684"
+    },
+    {
+      "path": "src/assets/fonts/RalewayExtraBold.ttf",
+      "sha1": "507ed8ef6f99e561f51f3cde5cc16e09270308d6"
+    },
+    {
+      "path": "src/assets/fonts/RalewayExtraLight.ttf",
+      "sha1": "cc62191554e92d8bd44eedc0f1e9b7979544548d"
+    },
+    {
+      "path": "src/assets/fonts/RalewayExtraLightItalic.ttf",
+      "sha1": "26ba1d5cff49c5aac434347134f7e3d009165bb7"
+    },
+    {
+      "path": "src/assets/fonts/RalewayItalic.ttf",
+      "sha1": "a9226e3ba88647bb23198ea264e24daef75e022e"
+    },
+    {
+      "path": "src/assets/fonts/RalewayLight.ttf",
+      "sha1": "8d2b201f053f6011b2f02111fb44b76a8146824a"
+    },
+    {
+      "path": "src/assets/fonts/RalewayLightItalic.ttf",
+      "sha1": "007745090057e1292d9d1bcaf42c80421e553d5d"
+    },
+    {
+      "path": "src/assets/fonts/RalewayMedium.ttf",
+      "sha1": "18128ef6b5306a11f256a4f16c2fa63ab8b608d9"
+    },
+    {
+      "path": "src/assets/fonts/RalewayMediumItalic.ttf",
+      "sha1": "c36f9f8d2da7b33dde6a041f868b60c064cc1a20"
+    },
+    {
+      "path": "src/assets/fonts/RalewayRegular.ttf",
+      "sha1": "5a37f51d6a22ae86cc64c9085b5f64b180ad2609"
+    },
+    {
+      "path": "src/assets/fonts/RalewaySemiBold.ttf",
+      "sha1": "a98dee96e1e93fbf4ff1c50f6e8834e49f17f72f"
+    },
+    {
+      "path": "src/assets/fonts/RalewaySemiBoldItalic.ttf",
+      "sha1": "cbf0ef72d171cb017d8d79d5f986a8f17c05c391"
+    }
+  ]
+}
