@@ -1,5 +1,5 @@
 import React from 'react';
-import { View,ImageBackground,TouchableOpacity,Text, Image, TouchableWithoutFeedback} from 'react-native';
+import { View,ImageBackground,Text, Image, TouchableWithoutFeedback} from 'react-native';
 import styles from './styles';
 import { Movie, NavigationTypes } from '~movies/types';
 import { useNavigation } from '@react-navigation/native';
