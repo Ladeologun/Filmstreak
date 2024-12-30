@@ -1,5 +1,5 @@
-import {StyleSheet, Platform, StatusBar} from 'react-native';
-import {COLORS} from '~styles';
+import {StyleSheet} from 'react-native';
+import {COLORS, Fonts} from '~styles';
 
 const styles = StyleSheet.create({
    contentContainerStyle: {
@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
    wishlistItemCard: {
       padding: 10,
       opacity: 0.8,
-      backgroundColor: '#171C48',
+      backgroundColor: COLORS.SECONDARY_SUBTHEME,
       justifyContent: 'space-between',
       alignItems: 'center',
       flexDirection: 'row',
@@ -18,8 +18,7 @@ const styles = StyleSheet.create({
    votesandpopularity: {
       flexDirection: 'row',
       marginTop: 8,
-      alignItems: 'center',
-      // justifyContent:"center",
+      alignItems: 'center'
    },
    categorycontainer: {
       flexDirection: 'row',
@@ -29,42 +28,56 @@ const styles = StyleSheet.create({
       paddingHorizontal: 8,
       paddingVertical: 3,
       borderRadius: 8,
-      // backgroundColor:"#363636",
    },
    categorttext: {
       color: '#fff',
       fontSize: 14,
+      fontFamily: Fonts.RalewayBold,
       lineHeight: 22,
-      // fontFamily:"Avenir"
    },
    wishListTextStyle: {
       color: COLORS.WHITE,
       fontSize: 16,
       fontWeight: '600',
    },
-   wishlistBtn: {
-      flexDirection: 'row',
-      alignSelf: 'center',
-      marginTop: 16,
-      backgroundColor: 'red',
-      paddingHorizontal: 8,
-      paddingVertical: 5,
-      borderRadius: 5,
-   },
+  
    titleStyle: {
-      fontSize: 18,
+      fontSize: 19,
       fontWeight: '500',
+      fontFamily: Fonts.CreepsterRegular,
+      textTransform:"uppercase",
       color: COLORS.WHITE,
    },
    releaseYearStyle: {
       color: COLORS.WHITE,
       marginTop: 8,
+      fontSize:15,
+      fontFamily: Fonts.GupterBold
    },
    containerStyle: {
       marginTop: 0,
       paddingHorizontal: 10,
       marginBottom: 16,
    },
+   imageStyle: {
+      height: 100, 
+      width: 100, 
+      borderRadius: 8
+   },
+   starIconStyle: {
+      width: 15, 
+      height: 15, 
+      marginRight: 5
+   },
+   deleteIconStyle: {
+      width: 20, 
+      height: 20, 
+      marginRight: 5
+   },
+   imageContainer: {
+      borderRadius: 8, 
+      marginRight: 15
+   }
 });
 
 export default styles;

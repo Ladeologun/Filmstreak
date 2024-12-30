@@ -11,18 +11,6 @@ const styles = StyleSheet.create({
     container:{
         backgroundColor:COLORS.PRIMARY
     },
-    background:{
-        width:"100%",
-        height:height < 700 ? height* 0.6:height*0.7
-    },
-    title:{
-        color:"#fff",
-        marginTop:8,
-        fontFamily: "Avenir", 
-        fontSize: 30, 
-        lineHeight: 36
-    },
-    
     overviewcon:{
         flex:1,
         paddingHorizontal:12,

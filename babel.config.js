@@ -29,7 +29,9 @@ module.exports = function (api) {
               "~utils/*":"./src/utils/*",
               "~movies":"./src/features/movies",
               "~navigation":"./src/navigation",
-              "~navigation/*":"./src/navigation/*"
+              "~navigation/*":"./src/navigation/*",
+              "~hooks":"./src/hooks",
+              "~hooks/*":"./src/hooks/*"
             }
           }
       ],

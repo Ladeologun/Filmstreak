@@ -1,4 +1,5 @@
 import { StyleSheet, Platform } from "react-native";
+import { COLORS } from "~styles";
 
 const styles = StyleSheet.create({
     barcontainer:{
@@ -15,6 +16,11 @@ const styles = StyleSheet.create({
         height:50,
         borderRadius:20,
         backgroundColor:'rgba(0, 0, 0, 0.4)'
+    },
+    leftIconStyle: {
+        width: 20, 
+        height: 20, 
+        tintColor: COLORS.WHITE
     }
 })
 

@@ -1,5 +1,5 @@
 import { StyleSheet, Platform, StatusBar } from "react-native";
-import { COLORS } from "~styles";
+import { COLORS, Fonts } from "~styles";
 
 const styles =  StyleSheet.create({
     contentContainerStyle: {
@@ -10,7 +10,7 @@ const styles =  StyleSheet.create({
     wishlistItemCard:{
         padding:10,
         opacity:0.8,
-        backgroundColor:"#171C48",
+        backgroundColor:COLORS.SECONDARY_SUBTHEME,
         flexDirection:"row"
     },
     
@@ -31,7 +31,6 @@ const styles =  StyleSheet.create({
     listContainer: {
         flex: 1,
         backgroundColor:"#080C28"
-       
     },
     listItemContainer: {
         gap: 8,
@@ -69,6 +68,13 @@ const styles =  StyleSheet.create({
         marginTop: 6,
         textAlign: "center"
     },
+    titleStyle: {
+        fontFamily:Fonts.GupterBold,
+        fontWeight:"700",
+        fontSize:23,
+        textTransform:"uppercase",
+        color: COLORS.SKYBLUE
+    }
 });
 
 export default styles;

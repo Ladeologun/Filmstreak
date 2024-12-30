@@ -1,4 +1,5 @@
 import {StyleSheet, Dimensions} from 'react-native';
+import { COLORS, Fonts } from '~styles';
 
 const {width} = Dimensions.get('window');
 const styles = StyleSheet.create({
@@ -16,7 +17,9 @@ const styles = StyleSheet.create({
       overflow: 'hidden',
    },
    text: {
-      color: '#fff',
+      color: COLORS.WHITE,
+      fontFamily: Fonts.RalewayBoldItalic,
+      fontSize: 16
    },
    playBtnStyle: {
       width: 45,

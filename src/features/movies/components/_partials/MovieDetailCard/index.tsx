@@ -1,12 +1,13 @@
 import React from 'react';
 import {Image, Text, View} from 'react-native';
 import styles from './styles';
-import {LOVE, STAR_LOGO} from '~movies/constants';
-import {COLORS} from '~styles';
+import {STAR_LOGO} from '~movies/constants';
 import WatchlistButton from '../WatchlistButton/Index';
+import {LimitTextComponent} from '~components';
 
 interface Iprops {
    id: number;
+   title: string;
    language: string;
    popularity: number;
    rating: number;
@@ -14,42 +15,34 @@ interface Iprops {
    isAddingMovieToWishlist: boolean;
    isMovieOnWishlist: boolean;
    isCheckingMovieState: boolean;
-   changeTheme: boolean
 }
 
-const MoviePreferenceSection: React.FC<Iprops> = ({
-   language,
+const MovieDetailCard: React.FC<Iprops> = ({
+   title,
    popularity,
    rating,
    addTowishlist,
    isAddingMovieToWishlist,
    isMovieOnWishlist,
    isCheckingMovieState,
-   changeTheme
 }) => {
    return (
       <React.Fragment>
+         <LimitTextComponent text={title} limit={25} textStyle={styles.title} />
          <View style={styles.votesandpopularity}>
-            <View style={[styles.categorycontainer, {marginLeft: 0}]}>
-               <Text style={styles.categorttext}>{language}</Text>
-            </View>
-            <View style={[styles.categorycontainer, {paddingHorizontal: 24}]}>
+            <View style={[styles.categorycontainer]}>
                <Text style={styles.categorttext}>{popularity}</Text>
             </View>
-            <View style={[styles.categorycontainer, {paddingHorizontal: 24}]}>
-               <Image
-                  source={STAR_LOGO}
-                  resizeMode="contain"
-                  style={{width: 15, height: 15, marginRight: 5}}
-               />
+            <View style={[styles.categorycontainer, {marginLeft: 8}]}>
+               <Image source={STAR_LOGO} resizeMode="contain" style={styles.imageStyle} />
                <Text style={styles.categorttext}>{rating}</Text>
             </View>
          </View>
 
          {!isCheckingMovieState && (
             <WatchlistButton
-               changeTheme={changeTheme}
                isOnwishlist={isMovieOnWishlist}
+               btnStyle={styles.btnStyle}
                addingTowishlist={isAddingMovieToWishlist}
                handleBtnPress={() => {
                   if (isMovieOnWishlist) {
@@ -64,4 +57,4 @@ const MoviePreferenceSection: React.FC<Iprops> = ({
    );
 };
 
-export default React.memo(MoviePreferenceSection);
+export default React.memo(MovieDetailCard);

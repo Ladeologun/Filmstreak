@@ -34,7 +34,7 @@ const MoviesDashboard: React.FC = () => {
       syncMoviesFromTMDB(onResultFetched);
    }, []);
 
-   const refreshHomeScreen = async () => {
+   const refreshDashboard = async () => {
       setRefreshing(true);
       syncMoviesFromTMDB(onResultFetched);
    };
@@ -47,7 +47,7 @@ const MoviesDashboard: React.FC = () => {
             refreshControl={
                <RefreshControl
                   refreshing={isRefreshing}
-                  onRefresh={refreshHomeScreen}
+                  onRefresh={refreshDashboard}
                   style={styles.refreshControlStyle}
                   tintColor={COLORS.SKYBLUE}
                />

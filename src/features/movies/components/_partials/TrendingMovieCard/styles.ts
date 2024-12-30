@@ -1,5 +1,5 @@
 import { StyleSheet, Platform, StatusBar, Dimensions } from "react-native";
-import { COLORS } from "~styles";
+import { COLORS, Fonts } from "~styles";
 
 const {width,height} = Dimensions.get("screen")
 const styles = StyleSheet.create({
@@ -28,18 +28,21 @@ const styles = StyleSheet.create({
     },
     itemTitle: {
         color: 'white',
-        fontSize: 22,
+        fontSize: 24,
         shadowColor: '#000',
         shadowOffset: { width: 0.8, height: 0.8 },
         shadowOpacity: 1,
         shadowRadius: 3,
         marginBottom: 5,
         fontWeight: "bold",
+        fontFamily: Fonts.PermanentMarkerRegular,
         elevation: 5
     },
     itemDescription: {
-        color: 'white',
-        fontSize: 12,
+        color: COLORS.WHITE,
+        fontSize: 13,
+        fontFamily:Fonts.RalewayRegular,
+        fontWeight:"600",
         shadowColor: '#000',
         shadowOffset: { width: 0.8, height: 0.8 },
         shadowOpacity: 1,

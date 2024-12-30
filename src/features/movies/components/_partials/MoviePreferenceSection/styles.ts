@@ -1,5 +1,5 @@
 import { StyleSheet, Platform, StatusBar, Dimensions } from "react-native";
-import { COLORS } from "~styles";
+import { COLORS, Fonts } from "~styles";
 
 const styles = StyleSheet.create({
     
@@ -20,10 +20,10 @@ const styles = StyleSheet.create({
         backgroundColor:"#363636",
     },
     categorttext:{
-        color:"#fff",
-        fontSize:14, 
+        color:COLORS.WHITE,
+        fontSize:15, 
         lineHeight: 22,
-        // fontFamily:"Avenir"
+        fontFamily: Fonts.RalewayBold
     },
     wishListTextStyle: {
         color: COLORS.WHITE,

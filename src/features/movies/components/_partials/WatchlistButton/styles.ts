@@ -1,18 +1,19 @@
 import { StyleSheet } from "react-native";
-import { COLORS } from "~styles";
+import { COLORS, Fonts } from "~styles";
 
 const styles = StyleSheet.create({
     
     wishListTextStyle: {
         color: COLORS.WHITE,
         fontSize: 16,
-        fontWeight:"600"
+        fontWeight:"700",
+        fontFamily: Fonts.RalewayBold
     },
     wishlistBtn: {
         flexDirection:"row",
         alignSelf:"center",
         marginTop:16,
-        backgroundColor:"#363636",
+        backgroundColor:COLORS.LIGHT_GRAY,
         paddingHorizontal:8,
         paddingVertical:5,
         borderRadius:5
@@ -20,7 +21,7 @@ const styles = StyleSheet.create({
     imageStyle: {
         width:20,
         height:20,
-        tintColor:"#fff",
+        tintColor:COLORS.WHITE,
         marginRight:10
     }
 })

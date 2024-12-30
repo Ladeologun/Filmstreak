@@ -13,6 +13,8 @@
         "~utils/*": ["utils/*"],
         "~navigation": ["navigation"],
         "~navigation/*": ["navigation/*"],
+        "~hooks": ["hooks"],
+        "~hooks/*": ["hooks/*"],
     }
   },
   "extends": "@react-native/typescript-config/tsconfig.json",
