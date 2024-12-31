@@ -1,5 +1,5 @@
 import { StyleSheet, Platform, StatusBar, Dimensions } from "react-native";
-import { COLORS } from "~styles";
+import { COLORS, Fonts } from "~styles";
 
 
 const { height } = Dimensions.get('window')
@@ -13,17 +13,9 @@ const styles = StyleSheet.create({
     title:{
         color:COLORS.WHITE,
         marginTop:8,
-        // fontFamily: "Avenir", 
+        fontFamily: Fonts.PermanentMarkerRegular,
         fontSize: 30, 
         lineHeight: 36
-    },
-    gradientOvelay: {
-        position: 'absolute',
-        bottom: 0,
-        width: '100%',
-        height: 200,
-        backgroundColor: 'rgba(15, 17, 29, 0.7)', // Dark semi-transparent color
-        zIndex: 1,
     },
     titleContainer:{
         width:"100%",
@@ -31,6 +23,14 @@ const styles = StyleSheet.create({
         alignItems:"center",
         justifyContent:"flex-end", 
         backgroundColor:"rgba(15, 17, 29, 0.2)"
+    },
+    titleWrapper: {
+        flex: 1, 
+        justifyContent: 'flex-end'
+    },
+    containerStyle:{
+        marginTop: 4, 
+        paddingHorizontal:10
     }
 
 })

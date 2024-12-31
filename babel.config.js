@@ -4,7 +4,7 @@ module.exports = function (api) {
     presets: ['module:@react-native/babel-preset'],
     env: {
         production: {
-            plugins: ['react-native-paper/babel', 'transform-remove-console']
+            plugins: []
         },
     },
     plugins: [
@@ -29,7 +29,9 @@ module.exports = function (api) {
               "~utils/*":"./src/utils/*",
               "~movies":"./src/features/movies",
               "~navigation":"./src/navigation",
-              "~navigation/*":"./src/navigation/*"
+              "~navigation/*":"./src/navigation/*",
+              "~hooks":"./src/hooks",
+              "~hooks/*":"./src/hooks/*"
             }
           }
       ],

@@ -20,7 +20,7 @@ const MovieCarouselSection: React.FC<Iprops> =({movies, title="Popular", showRig
                 keyExtractor={item => item.id.toString()}
                 key={'_'}
                 horizontal
-                renderItem={({item})=><MovieCard item={item}/>}
+                renderItem={({item})=><MovieCard item={item} section={title}/>}
                 ItemSeparatorComponent={ListItemSeperator}
             />
         </View>}

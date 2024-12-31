@@ -16,13 +16,13 @@ type WishlistResponseType = {
 
 const MovieWishlist: React.FC = () => {
 
-  const [loadingWishlist, setLoadingWishlist] = useState(false);
-  const [isFetchingNextPage, setFetchingNextPage] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [hasNextPage, setHasNextPage] = useState(false);
+  const [loadingWishlist, setLoadingWishlist] = useState(false);
+  const [isFetchingNextPage, setFetchingNextPage] = useState(false);
+  const [wishlistMovies, setWishlistMovies] = useState<Movie[]>([]);
   const [showErrorModalMessage, setShowErrorModalMessage] = useState("");
 
-  const [wishlistMovies, setWishlistMovies] = useState<Movie[]>([]);
 
   const onfetchWishlist = (type:RequestStatus,  response:WishlistResponseType, error:Error|null)=>{
     setLoadingWishlist(false)
@@ -66,13 +66,13 @@ const MovieWishlist: React.FC = () => {
 
 
   return (
-    <ScreenWrapper containerStyle={{backgroundColor:"#080C28"}} hideStatusBar={true}>
+    <ScreenWrapper containerStyle={{backgroundColor:COLORS.SECONDARY}} hideStatusBar={true}>
 
         <DetailsHeader 
             containerStyle={styles.containerStyle} 
             hasTitle 
             title='Wishlist ❤️'
-            titleStyle={{fontWeight:"700",fontSize:18}}
+            titleStyle={styles.titleStyle}
         />
 
         <FlatList
