@@ -1,7 +1,15 @@
 import { StyleSheet, Dimensions } from "react-native";
 import { COLORS} from "~styles";
+import styled from 'styled-components/native';
 
 const DeviceHeight = Dimensions.get("window").height;
+
+export const InfoImage = styled.Image`
+    height:"24px";
+    width:"24px"
+`;
+
+
 export default StyleSheet.create({
     mainContainer: {
         flex: 1,
