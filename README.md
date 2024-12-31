@@ -1,18 +1,16 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
-# FilmStreak - Mobile apllication for world trending movies listing
+# FilmStreak - Mobile application for trending movies listing
 
 FilmStreak is a mobile app for users to have at a glance , a view of world top movies . This repository contains the implementation for Filmstreak app.
 
 ## Table of Contents
 
-- [FilmStreak - Mobile apllication for world trending movies listing](#filmstreak---mobile-app-movies)
+- [FilmStreak - Mobile application for world trending movies listing](#filmStreak---mobile-application-for-trending-movies-listing)
   - [Table of Contents](#table-of-contents)
   - [Overview](#overview)
   - [Extra Features](#extra-features)
   - [Technology Stack](#technology-stack)
   - [Run The App](#run-the-app)
-  - [Docs](#docs)
   - [License](#license)
 
 ## Overview
@@ -123,12 +121,6 @@ You've successfully run FilmStreak App. :partying_face:
 
 If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
 
-# Learn More
+## License
 
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+The FilmStreak Application is open-source and released under the [MIT License](LICENSE). Feel free to modify and use the code as per the terms of the license.
