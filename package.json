@@ -7,6 +7,7 @@
     "ios": "react-native run-ios",
     "lint": "eslint ./src --fix",
     "prettier": "prettier ./src --write",
+    "prebuild-ios": "npx react-native bundle --entry-file index.js --platform ios --dev false --bundle-output ios/main.jsbundle --assets-dest ios",
     "start": "react-native start",
     "test": "jest"
   },
