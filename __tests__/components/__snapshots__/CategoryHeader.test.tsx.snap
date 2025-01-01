@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "flexDirection": "row",
+      "justifyContent": "space-between",
+      "marginBottom": 20,
+      "paddingBottom": 5,
+      "paddingTop": 15,
+    }
+  }
+>
+  <Text
+    style={
+      {
+        "borderBottomColor": "green",
+        "color": "#ffffff",
+        "fontFamily": "PermanentMarker-Regular",
+        "fontSize": 19,
+        "fontWeight": "800",
+        "textDecorationColor": "gray",
+        "textShadowColor": "gray",
+        "textShadowOffset": {
+          "height": 0.5,
+          "width": 0.5,
+        },
+      }
+    }
+  >
+    filmstreak
+  </Text>
+</View>
+`;

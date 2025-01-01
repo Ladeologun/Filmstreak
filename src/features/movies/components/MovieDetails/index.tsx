@@ -1,6 +1,6 @@
 import React, {useCallback} from 'react';
 import {View, Text, ScrollView} from 'react-native';
-import styles from './styles';
+import styles, { OverviewContainer, OverViewText } from './styles';
 import MovieDetailsHeaderSection from '../_partials/MovieDetailsHeaderSection';
 import MoviePreferenceSection from '../_partials/MoviePreferenceSection';
 import {Movie} from '~movies/types';
@@ -61,12 +61,12 @@ const MovieDetailsScreen: React.FC = () => {
                isCheckingMovieState={checkingMovieState}
                changeTheme={changeTheme}
             />
-            <View style={styles.overviewcon}>
-               <Text style={styles.textoverview}>Overview</Text>
+            <OverviewContainer>
+               <OverViewText>Overview</OverViewText>
                <Text numberOfLines={5} style={styles.textdetails}>
                   {movie?.overview}
                </Text>
-            </View>
+            </OverviewContainer>
 
             <ErrorInfoModal
                isModalVisible={!!showErrorModalMessage}

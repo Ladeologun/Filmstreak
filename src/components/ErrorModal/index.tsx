@@ -1,6 +1,6 @@
 import {Text,View,Modal,TouchableOpacity,ViewStyle, Image} from "react-native";
 import React from "react";
-import styles from "./styles";
+import styles, { InfoImage } from "./styles";
 import { COLORS } from "~styles";
 
 
@@ -42,10 +42,10 @@ const ErrorInfoModal:React.FC<Props> = ({
                                 />
                             </TouchableOpacity>
                         </View>
-                        <Image 
+                        <InfoImage 
                             source={require("../../assets/drawables/info-icon.png")}
                             tintColor={COLORS.RED}
-                            style={{height:24, width:24}} 
+                            // style={{}} 
                         />
                         <Text style={styles.header}>Error</Text>
                         <Text style={styles.desc}>{desc}</Text>

@@ -1,5 +1,5 @@
 import {Image, Text, TextStyle, TouchableOpacity, View, ViewStyle} from 'react-native';
-import styles from './styles';
+import styles, { BackButton } from './styles';
 import {LEFT_ARROW, WISHLIST_ICON} from '~movies/constants';
 import {useNavigation} from '@react-navigation/native';
 import {Walkthrough} from '~components';
@@ -39,14 +39,14 @@ const DetailsHeader: React.FC<Iprops> = ({
 
    return (
       <View style={[styles.barcontainer, containerStyle]}>
-         <TouchableOpacity
+         <BackButton
             style={styles.backarrow}
             onPress={() => {
                navigation.goBack();
             }}
          >
             <Image source={LEFT_ARROW} style={styles.leftIconStyle} />
-         </TouchableOpacity>
+         </BackButton>
 
          {!!hasTitle && <Text style={[{color: COLORS.WHITE}, titleStyle]}>{title}</Text>}
 
