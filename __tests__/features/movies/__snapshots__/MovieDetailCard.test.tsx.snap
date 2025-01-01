@@ -1,0 +1,186 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+[
+  <Text
+    style={
+      {
+        "color": "#ffffff",
+        "fontFamily": "Creepster-Regular",
+        "fontSize": 24,
+      }
+    }
+  >
+    new dragon show
+  </Text>,
+  <View
+    style={
+      {
+        "flexDirection": "row",
+        "marginVertical": 16,
+      }
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "alignItems": "center",
+            "backgroundColor": "#363636",
+            "borderRadius": 8,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "paddingHorizontal": 8,
+            "paddingVertical": 3,
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "#fff",
+            "fontFamily": "Raleway-Bold",
+            "fontSize": 14,
+            "lineHeight": 22,
+          }
+        }
+      >
+        7
+      </Text>
+    </View>
+    <View
+      style={
+        [
+          {
+            "alignItems": "center",
+            "backgroundColor": "#363636",
+            "borderRadius": 8,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "paddingHorizontal": 8,
+            "paddingVertical": 3,
+          },
+          {
+            "marginLeft": 8,
+          },
+        ]
+      }
+    >
+      <Image
+        resizeMode="contain"
+        source={
+          {
+            "testUri": "../../../src/assets/drawables/star.png",
+          }
+        }
+        style={
+          {
+            "height": 15,
+            "marginRight": 5,
+            "width": 15,
+          }
+        }
+      />
+      <Text
+        style={
+          {
+            "color": "#fff",
+            "fontFamily": "Raleway-Bold",
+            "fontSize": 14,
+            "lineHeight": 22,
+          }
+        }
+      >
+        7.6
+      </Text>
+    </View>
+  </View>,
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "alignSelf": "center",
+            "backgroundColor": "#363636",
+            "borderRadius": 5,
+            "flexDirection": "row",
+            "marginTop": 16,
+            "paddingHorizontal": 8,
+            "paddingVertical": 5,
+          },
+          {
+            "backgroundColor": "red",
+          },
+          {
+            "alignSelf": "flex-start",
+            "marginTop": 0,
+            "paddingVertical": 8,
+          },
+        ]
+      }
+    >
+      <Image
+        source={
+          {
+            "testUri": "../../../src/assets/drawables/love.png",
+          }
+        }
+        style={
+          {
+            "height": 20,
+            "marginRight": 10,
+            "tintColor": "#ffffff",
+            "width": 20,
+          }
+        }
+      />
+      <Text
+        style={
+          {
+            "color": "#ffffff",
+            "fontFamily": "Raleway-Bold",
+            "fontSize": 16,
+            "fontWeight": "700",
+          }
+        }
+      >
+        Saved to wishlist
+      </Text>
+    </View>
+  </View>,
+]
+`;
