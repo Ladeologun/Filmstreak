@@ -1,0 +1,182 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "marginBottom": 20,
+        "paddingBottom": 5,
+        "paddingTop": 15,
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "borderBottomColor": "green",
+          "color": "#ffffff",
+          "fontFamily": "PermanentMarker-Regular",
+          "fontSize": 19,
+          "fontWeight": "800",
+          "textDecorationColor": "gray",
+          "textShadowColor": "gray",
+          "textShadowOffset": {
+            "height": 0.5,
+            "width": 0.5,
+          },
+        }
+      }
+    >
+      Popular
+    </Text>
+  </View>
+  <RCTScrollView
+    ItemSeparatorComponent={[Function]}
+    data={
+      [
+        {
+          "backPoster": "https://example.com/backposter.jpg",
+          "date": "2024-04-12",
+          "id": 1,
+          "language": "English",
+          "overview": "A thrilling adventure of a lifetime.",
+          "popularity": 85.2,
+          "poster": "https://example.com/poster.jpg",
+          "rating": 8.5,
+          "title": "The Great Adventure",
+          "video": true,
+        },
+      ]
+    }
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={true}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={0.0001}
+    stickyHeaderIndices={[]}
+    viewabilityConfigCallbackPairs={[]}
+  >
+    <View>
+      <View
+        onFocusCapture={[Function]}
+        onLayout={[Function]}
+        style={
+          [
+            {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "marginBottom": 10,
+              "width": 375,
+            }
+          }
+        >
+          <View
+            accessibilityIgnoresInvertColors={true}
+            style={
+              {
+                "alignItems": "center",
+                "borderRadius": 10,
+                "height": 150,
+                "justifyContent": "center",
+                "marginBottom": 10,
+                "overflow": "hidden",
+                "width": "100%",
+              }
+            }
+          >
+            <Image
+              source={
+                {
+                  "uri": "https://example.com/poster.jpg",
+                }
+              }
+              style={
+                [
+                  {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  {
+                    "height": 150,
+                    "width": "100%",
+                  },
+                  undefined,
+                ]
+              }
+            />
+            <Image
+              source={
+                {
+                  "testUri": "../../../src/assets/drawables/play-button.png",
+                }
+              }
+              style={
+                {
+                  "height": 45,
+                  "tintColor": "skyblue",
+                  "width": 45,
+                }
+              }
+            />
+          </View>
+          <Text
+            numberOfLines={1}
+            style={
+              {
+                "color": "#ffffff",
+                "fontFamily": "Raleway-BoldItalic",
+                "fontSize": 16,
+              }
+            }
+          >
+             
+            The Great Adventure
+             
+          </Text>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
