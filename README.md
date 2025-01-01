@@ -11,6 +11,7 @@ FilmStreak is a mobile app for users to have at a glance , a view of world top m
   - [Extra Features](#extra-features)
   - [Technology Stack](#technology-stack)
   - [Run The App](#run-the-app)
+  - [Run Test](#run-test)
   - [License](#license)
 
 ## Overview
@@ -112,6 +113,14 @@ This is one way to run your app — you can also run it directly from within And
 
 
 You've successfully run FilmStreak App. :partying_face:
+
+## Run Test
+
+To run the unit tests, run this command from the _root_ of your React Native project:
+
+   ```
+   npm run test
+   ```
 
 ### Now what?
 
