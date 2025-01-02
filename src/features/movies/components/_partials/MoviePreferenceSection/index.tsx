@@ -1,8 +1,7 @@
 import React from 'react';
 import {Image, Text, View} from 'react-native';
 import styles from './styles';
-import {LOVE, STAR_LOGO} from '~movies/constants';
-import {COLORS} from '~styles';
+import {STAR_LOGO} from '~movies/constants';
 import WatchlistButton from '../WatchlistButton/Index';
 
 interface Iprops {

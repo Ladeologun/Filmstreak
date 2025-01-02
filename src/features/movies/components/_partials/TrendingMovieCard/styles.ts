@@ -1,18 +1,11 @@
-import { StyleSheet, Platform, StatusBar, Dimensions } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
 import { COLORS, Fonts } from "~styles";
 
 const {width,height} = Dimensions.get("screen")
 const styles = StyleSheet.create({
     container:{
-        // flex:1,
         width:width,
-        height:height * 0.40,
-        // shadowColor:COLORS.WHITE,
-        // shadowOffset:{width:0.5,height:0.5},
-        // shadowOpacity:0.5,
-        // shadowRadius:3,
-        // elevation:5,
-        // borderRadius:10,
+        height:height * 0.40
     },
 
     textview:{

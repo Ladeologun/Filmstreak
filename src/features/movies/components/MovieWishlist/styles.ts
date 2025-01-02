@@ -1,4 +1,4 @@
-import { StyleSheet, Platform, StatusBar } from "react-native";
+import { StyleSheet } from "react-native";
 import { COLORS, Fonts } from "~styles";
 
 const styles =  StyleSheet.create({
