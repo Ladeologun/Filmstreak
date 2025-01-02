@@ -21,9 +21,7 @@ const styles = StyleSheet.create({
         color:COLORS.WHITE,
         fontWeight:"700",
         letterSpacing:1,
-        // fontFamily:"Times",
         fontFamily:Fonts.GupterBold,
-        // opacity:0.3
         
     },
    
